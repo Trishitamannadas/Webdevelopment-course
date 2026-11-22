@@ -1,0 +1,26 @@
+h1{color:red; left: 50%; transform:translateX(-50%); top:70px;
+     position:absolute}
+nav{display: flex; background-color: black; justify-content: center; align-items: center; 
+    gap:50px; left:0px; width:100%; padding:10px; position:fixed; top:5px}
+nav a{text-decoration: none; color:white; font-size: 20px; padding-right:50px; 
+    border-right: 2px solid white}
+nav a:last-child{border-right: none}
+nav a:hover{color:brown}
+.dropdown{position:relative}
+
+.dropdown-menu{ display:none; background-color: black; 
+     position:absolute; color:black;}
+.dropdown-menu a{display:block; color:white; white-space:nowrap}
+.dropdown:hover .dropdown-menu{display:block}
+.scroll-container{overflow: hidden; width:100%; background-color: aqua}
+.scroll-text{white-space:nowrap; font-size:20px; width: max-content; animation: scroll 8s linear infinite alternate}
+@keyframes scroll{
+    from
+    {
+        transform: translateX(0)
+    }
+    to
+ {
+        transform: translateX(calc(100vw - 100%))
+    }
+}

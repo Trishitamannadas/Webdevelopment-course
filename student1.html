@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student admission form</title>
+<style>
+table{border-collapse: collapse; width:400px; height:50px; position:absolute;
+   left:50%; transform: translateX(-50%); top:200px}
+th, td{border:2px solid black; text-align: center; padding:20px; color:black}
+th{background-color: red}
+td{background-color: blueviolet}
+
+
+</style>
+</head>
+<body>
+  <h1>Student submission form</h1>
+  <form id="myForm">
+  <label>name</label>
+  <input type="text", id="name"; placeholder="type your name here">
+  <label>email</label>
+  <input type="email", id="email"; placeholder="type your email here">
+<label>course</label>
+  <select id="course">
+    <option value="">Select course</option>
+    <option value="Web development">Web development</option>
+    <option value="DBMS">DBMS</option>
+        <option value="Verilog">Verilog</option>
+    </select>
+  <button type="submit" id="btn">Submission completed!</button>
+  </form>
+<table border="1" id="student-table">
+<tr>
+  <th>name</th>
+  <th>email</th>
+  <th>course</th>
+</tr>
+</table>
+<script>
+  alert("Hi Milan!");
+let form = document.getElementById("myForm");
+form.addEventListener("submit", function(event){
+  event.preventDefault(); 
+  let name=document.getElementById("name").value;
+  if (name==="")
+{alert("Enter name please");
+  return;
+}
+  let email=document.getElementById("email").value;
+let course=document.getElementById("course").value;
+alert("Form submitted");
+//create a new row
+let table=document.getElementById("student-table");
+let row=table.insertRow();
+//Create cells and put values
+row.insertCell(0).innerHTML=name;
+row.insertCell(1).innerHTML=email;
+row.insertCell(2).innerHTML=course;
+form.reset();
+}
+);
+</script>
+</body>
+</html>
